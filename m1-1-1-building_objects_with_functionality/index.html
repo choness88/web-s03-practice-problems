@@ -9,11 +9,31 @@
     */
     //ENTER YOUR CODE HERE
 
+    const chef = {
+      name: "Rana",
+      from: "Guam",
+      greet() {
+        return `Hello I am ${this.name}, and my specialty is grilling`
+      }
+    }
+
+    console.log(chef.greet())
+
     /*
     PROBLEM 2: Write an object called baker that includes her name, her station (the bakery), and a bake method that takes a name and baked good as parameters
 and returns "(add name) just baked a (add baked good)". Console.log the result of the bake method so it prints to the console.
     */
     //ENTER YOUR CODE HERE
+
+    const baker = {
+      name: 'Bree',
+      station: 'the bakery',
+      bake(name, bakedGood) {
+        return `${this.name} just baked a ${bakedGood}.`
+      }
+    }
+
+    console.log(baker.bake(name, "cake"))
 
     /*
     PROBLEM 3: Write an object called knife that uses the compact syntax and includes:
@@ -24,6 +44,16 @@ and returns "(add name) just baked a (add baked good)". Console.log the result o
     */
     //ENTER YOUR CODE HERE
 
+    const knife = {
+      sharp: true,
+      size: "5in",
+      cut(num, food) {
+        return `cut ${food} in ${num} seconds.`
+      }
+    }
+
+    console.log(knife.cut(10, "apples"))
+
     /*
     PROBLEM 4: Write an object called Chicken Parmesan that uses the compact syntax and includes:
         • A course property with a value of entree
@@ -33,20 +63,40 @@ and returns "(add name) just baked a (add baked good)". Console.log the result o
     */
     //ENTER YOUR CODE HERE
 
+    let chickenParmesan = {
+      course: "entree",
+      type: "Italian",
+      serve(item, course) {
+        return `${item} has been served for the ${this.course} course.`
+      }
+    }
+
+    console.log(chickenParmesan.serve("Pasta"))
+
+    // let chickenParmesan = {
+    //   course: "entree",
+    //   type: "Italian",
+    //   serve(item, course) {
+    //     return `${item} has been served for the ${course} course`;
+    //   }
+    // }
+
+    // console.log(chickenParmesan.serve('pasta', 'entree'))
+
     /*
     PROBLEM 5 (DEBUGGING): When trying to have a hostess seat a table, you are getting this error: "Unexpected token 'function'". Fix this error and console.log the seat method so that the method prints to the console. Note: You can solve this with either method syntax.
     */
-    /*
+    
     let hostess = {
       name: "Cara",
       experience: "7 years",
-      function seat(number){
+      seat(number){
         return `Right this way to table ${number}`;
       }
     }
 
     console.log(hostess.seat(5));
-    */
+    
 
   </script>
 </body>
