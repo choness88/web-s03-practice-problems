@@ -89,24 +89,30 @@
 
     console.log(adventurer.heal(80))
 
-    /*
-  PROBLEM 5 (DEBUGGING): The following code is supposed to create a bankAccount object, but you receive the error: 'Uncaught ReferenceError: balance is not defined'. Fix the errors and invoke the methods to display the correct messages.
+    
+  /*PROBLEM 5 (DEBUGGING): The following code is supposed to create a bankAccount object, but you receive the error: 'Uncaught ReferenceError: balance is not defined'. Fix the errors and invoke the methods to display the correct messages.*/
 
   const bankAccount = {
-    balance: 0,
+    balance: 5,
     deposit: function(amount) {
-      balance += amount;
+      this.balance += amount;
       console.log(`Deposited $${amount}.`);
     },
     withdraw: function(amount) {
-      balance -= amount;
+      this.balance -= amount;
       console.log(`Withdrawn $${amount}.`);
     },
     displayBalance: function() {
-      console.log(`Balance: $${balance}.`);
+      console.log(`Balance: $${this.balance}.`);
     }
   };
-  */
+
+  bankAccount.deposit(100)
+  bankAccount.withdraw(2)
+  bankAccount.displayBalance()
+
+  
+  
 
     //ENTER YOUR CODE HERE
   </script>
