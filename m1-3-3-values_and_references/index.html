@@ -11,11 +11,23 @@
     const drink = { name: 'orange juice' };
     //ENTER YOUR CODE HERE
 
+    const drinkCopy = drink
+    drinkCopy.name = 'apple juice'
+
+    console.log(drink.name)
+    console.log(drinkCopy.name)
+
     /*
     PROBLEM 2: Make an object called uniquePlayer the properties name and sport. Use the object player's property values as the values for uniquePlayer. Change the name of uniquePlayer to "Tony G" and print both the objects to the console. Before you run it, what values do you expect to be logged?
     */
     const player = { name: "Ken G", sport: "baseball" };
     //ENTER YOUR CODE HERE
+
+    let uniquePlayer = player
+    uniquePlayer.name = 'Tony G'
+
+    console.log(player.name)
+    console.log(uniquePlayer.name)
 
     /*
     PROBLEM 3: Take the pizzaToppings array and create an array called pizzaToppingsCopy. Add a topping of your choice to the pizzaToppingsCopy array. Log the two arrays to the console. Before you run it, do you think the arrays will be the same or different?
@@ -23,18 +35,37 @@
     const pizzaToppings = ["cheese", "pepperoni"];
     //ENTER YOUR CODE HERE
 
+    let pizzaToppingsCopy = pizzaToppings
+    pizzaToppingsCopy.push('mushrooms')
+
+    console.log(pizzaToppings)
+    console.log(pizzaToppingsCopy)
+
     /*
     PROBLEM 4: Make another array called uniquePizzaToppings. Use the values from pizzaToppings to set the initial values of uniquePizzaToppings. Make sure that if you add a topping to uniquePizzaToppings, the topping is not added to the other arrays. To test your code, add a topping to uniquePizzaToppings and console log the arrays.
     */
     //ENTER YOUR CODE HERE
 
+   const uniquePizzaToppings = []
+   for (toppings of pizzaToppings) {
+    uniquePizzaToppings.push(toppings)
+   }
+
+   uniquePizzaToppings.push('olives')
+   console.log(pizzaToppings)
+   console.log(uniquePizzaToppings)
+
+
     /*
     PROBLEM 5 (DEBUGGING): We made a copy of an object in hopes that it can change independently. When we added a property to the new object, the property was also added to the original. See if you can figure out why this happened and how to fix it so they two objects are independent of each other.
     */
-    // const employee = { name: "Carl", age: 45, skills: ["programing", "project management"] };
-    // const projectManager = employee;
-    // projectManager.project = "Super Secret Project";
-    // console.log(employee);
+    const employee = { name: "Carl", age: 45, skills: ["programing", "project management"] };
+    const projectManager = {employee: employee};
+    projectManager.project = "Super Secret Project";
+    console.log(employee);
+    console.log(projectManager)
+
+
 
   </script>
 
