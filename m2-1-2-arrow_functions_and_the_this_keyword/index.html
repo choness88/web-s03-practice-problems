@@ -6,14 +6,34 @@
 
   <script>
     /*
-    PROBLEM 1: Change the arrow function on the multiply method to the correct syntax used within an object. Console.log the object before and after the change to see the results printed to the console.
-    const obj = {
-        multiplier: 10,
-        multiply: (a, b) => a * b * this.multiplier;
-      };
-    */
+    PROBLEM 1: Change the arrow function on the multiply method to the correct syntax used within an object. Console.log the object before and after the change to see the results printed to the console. */
+    const test = {
+      multiplier: 10,
+      multiply: (a, b) => a * b * test.multiplier
+
+    };
+
+    console.log(test.multiply(4, 5))
 
     //ENTER YOUR CODE HERE
+
+    const obj = {
+      multiplier: 10,
+      multiply: function (a, b) {
+        return a * b * this.multiplier
+      }
+
+    };
+
+
+    console.log(obj.multiply(1, 0))
+
+    const testTwo = {
+      multiplier: 10,
+      multiply: (a, b) => a * b * test.multiplier // Use test.multiplier instead of this.multiplier
+    };
+
+    console.log(testTwo.multiply(4, 5));
 
     /*
     PROBLEM 2: Change the arrow function called calculateTotal to work within the flock object below while also using the 'this' keyword. Console.log the calculateTotal method to see the results printed to the console.
@@ -28,6 +48,19 @@
     */
 
     //ENTER YOUR CODE HERE
+
+    const flock = {
+      herd: 200,
+      species: 'seagull',
+      calculateTotal: function (number) {
+        this.herd += number;
+      }
+    }
+
+    flock.calculateTotal(1000)
+
+    console.log(flock)
+
 
 
     /*
@@ -48,6 +81,8 @@
    */
 
     //ENTER YOUR CODE HERE
+
+    
 
 
     /*
