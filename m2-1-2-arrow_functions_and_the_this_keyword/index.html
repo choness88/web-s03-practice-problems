@@ -54,12 +54,11 @@
       species: 'seagull',
       calculateTotal: function (number) {
         this.herd += number;
+        return this.herd
       }
     }
 
-    flock.calculateTotal(1000)
-
-    console.log(flock)
+    console.log(flock.calculateTotal(1000))
 
 
 
@@ -82,7 +81,24 @@
 
     //ENTER YOUR CODE HERE
 
-    
+    const game = {
+      name: 'Hide n Seek',
+      players: 5,
+      location: 'Central Park',
+      countDown(num) {
+        if (num >= 0) {
+          console.log(`Current countdown number: ${num}`)
+          this.countDown(num - 1)
+        }
+        else return `This countdown is done!`
+      }
+    }
+
+    game.countDown(5)
+
+    // console.log(game.countDown(5))
+
+
 
 
     /*
@@ -102,18 +118,43 @@
 
     //ENTER YOUR CODE HERE
 
+    const tech = {
+      name: 'calculator',
+      type: 'computer',
+      number1: 4,
+      number2: 5,
+      add() {
+        return this.number1 + this.number2
+
+      },
+      subtract() {
+        return this.number1 - this.number2
+      },
+      multiply() {
+        return this.number1 * this.number2
+      }
+    }
+
+
+    console.log(tech.subtract())
+    console.log(tech.add())
+    console.log(tech.multiply())
+
     /*
     PROBLEM 5 (DEBUGGING): This object contains a value property and a double method that multiplies the value by 2. When invoking the double method, you receive the error: 'NaN' (Not a Number). Fix the code below and console.log the double method to see the correct result printed to the console.
     */
-    // const obj = {
-    //   value: 10,
-    //   double: () => {
-    //     return this.value * 2;
-    //   }
-    // };
-    //
-    // console.log(obj.double()); // Output: NaN
+//     const obj1 = {
+//       value: 30,
+//       double() {
+//         return this.value * 2;
+//       }
+//     };
 
+//     console.log(obj1.double()); // Output: NaN
+
+const person = {name: 'John', age: 30};
+const {name: firstName, age} = person;
+console.log(firstName, age); 
   </script>
 
 </body>
